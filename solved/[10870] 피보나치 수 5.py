@@ -1,5 +1,5 @@
 """
-problem tier : Bronze 2 (solved.ac)
+problem tier : Bronze 2 (solved_old.ac)
 """
 
 

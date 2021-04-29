@@ -1,5 +1,5 @@
 """
-problem tier : Silver 1 (solved.ac)
+problem tier : Silver 1 (solved_old.ac)
 """
 
 import math

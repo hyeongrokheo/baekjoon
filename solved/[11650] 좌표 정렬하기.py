@@ -1,0 +1,16 @@
+"""
+problem tier : Silver 5 (solved_old.ac)
+"""
+
+import sys
+
+N = int(input())
+arr = []
+for i in range(N):
+    X, Y = map(lambda x: int(x), sys.stdin.readline().strip().split())
+    arr.append([X, Y])
+
+arr.sort(key=lambda x: (x[0], x[1]))
+
+for X, Y in arr:
+    print(X, Y)

@@ -1,12 +1,10 @@
 """
-problem tier : Bronze 2 (solved.ac)
+problem tier : Bronze 2 (solved_old.ac)
 """
 
 N, M = map(lambda x: int(x), input().split())
 
 cards = list(map(lambda x: int(x), input().split()))
-
-# print(N, M, cards)
 
 best = 0
 

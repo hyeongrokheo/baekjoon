@@ -1,3 +1,2 @@
-a = '0 0 0'
-print(a)
-print(a.split())
+a = [1,2,3]
+print(a.pop())
