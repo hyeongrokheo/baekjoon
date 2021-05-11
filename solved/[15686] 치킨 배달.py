@@ -1,3 +1,6 @@
+"""
+problem tier : Gold 5 (solved_old.ac)
+"""
 
 import sys
 sys.setrecursionlimit(10**6)
