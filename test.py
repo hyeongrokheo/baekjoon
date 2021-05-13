@@ -1,59 +1,58 @@
+"""
+가장 작은 수를 기억하는 segment tree 만들어보자....
+"""
+
 import sys
-sys.setrecursionlimit(10**6)
-
-N, M = map(lambda x: int(x), input().split())
-
-maps = []
-for i in range(N):
-    maps.append(list(map(lambda x: int(x), input().split())))
-
-house = []
-chicken = []
-count = 0
-# print(maps)
-for i in range(N):
-    for j in range(N):
-        if maps[i][j] == 1:
-            house.append([i, j])
-        elif maps[i][j] == 2:
-            chicken.append([count, i, j])
-            count += 1
+sys.setrecursionlimit(10**9)
 
 
-selected_chicken = []
-def calculate():
-    dist_sum = 0
-    for h in house:
-        min_dist = 200
-        for c in selected_chicken:
-            # print(h, c)
-            dist = abs(h[0]-c[1]) + abs(h[1]-c[2])
-            if min_dist > dist:
-                min_dist = dist
-        # print(min_dist)
-        dist_sum += min_dist
-    return dist_sum
+class Node:
+    def __init__(self, value=None):
+        self.value = value
+        self.left = None
+        self.right = None
 
-# print(chicken)
-min_chicken_distance = 999999
-def bfs():
-    global min_chicken_distance
-    # print(selected_chicken)
-    if len(selected_chicken) == M:
-        chicken_distance = calculate()
-        if min_chicken_distance > chicken_distance:
-            min_chicken_distance = chicken_distance
-    else:
-        if len(selected_chicken) == 0:
-            for c in chicken:
-                selected_chicken.append(c)
-                bfs()
-                selected_chicken.pop()
-        else:
-            for c in chicken[selected_chicken[-1][0]+1:]:
-                selected_chicken.append(c)
-                bfs()
-                selected_chicken.pop()
 
-bfs()
-print(min_chicken_distance)
+class Tree:
+    def __init__(self):
+        self.root = Node()
+
+    def print_tree(self):
+        self._print_tree(self.root)
+
+    def _print_tree(self, cursor):
+        if cursor:
+            self._print_tree(cursor.left)
+            self._print_tree(cursor.right)
+            if cursor.value:
+                print(cursor.value)
+
+    def insert(self, value):
+        cursor = self.root
+        while True:
+            if cursor.value:
+                if value < cursor.value:
+                    if cursor.left:
+                        cursor = cursor.left
+                    else:
+                        cursor.left = Node()
+                        cursor = cursor.left
+                elif value > cursor.value:
+                    if cursor.right:
+                        cursor = cursor.right
+                    else:
+                        cursor.right = Node()
+                        cursor = cursor.right
+            else:
+                cursor.value = value
+                break
+
+
+tree = Tree()
+while True:
+    try:
+        tree.insert(int(sys.stdin.readline()))
+    except:
+        break
+
+tree.print_tree()

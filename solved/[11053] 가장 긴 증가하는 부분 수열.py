@@ -14,4 +14,5 @@ for i in range(N):
             max_count = dp[j]
     dp[i] = max_count + 1
 
+print(dp)
 print(max(dp))
