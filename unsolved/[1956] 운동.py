@@ -41,7 +41,7 @@ while True:
         distance[adj] = min(distance[adj], distance[v] + Edges[v][adj])
         heapq.heappush(pri_queue, (distance[adj], adj))
 
-    if not start_flag and v == :
+    if not start_flag and v == None: # 의미없는 None
         finished[v] = True
 
 distance = list(map(lambda x: 'INF' if x == INF else x, distance))[1:]
