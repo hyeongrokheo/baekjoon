@@ -1,3 +1,7 @@
+"""
+problem tier : Bronze 3 (solved_old.ac)
+"""
+
 def print_star(length, star):
     empty_length = int((length - star) / 2)
     for _ in range(empty_length):

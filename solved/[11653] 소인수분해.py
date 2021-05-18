@@ -1,3 +1,7 @@
+"""
+problem tier : Silver 4 (solved_old.ac)
+"""
+
 N = int(input())
 
 if N == 1:

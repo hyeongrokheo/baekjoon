@@ -1,3 +1,7 @@
+"""
+problem tier : Bronze 4 (solved_old.ac)
+"""
+
 X = int(input())
 Y = int(input())
 

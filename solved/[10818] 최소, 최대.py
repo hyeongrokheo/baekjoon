@@ -1,3 +1,7 @@
+"""
+problem tier : Bronze 3 (solved_old.ac)
+"""
+
 N = int(input())
 num_arr = list(map(int, input().split(' ')))
 min = 1000000

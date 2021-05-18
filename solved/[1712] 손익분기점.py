@@ -1,3 +1,7 @@
+"""
+problem tier : Bronze 4 (solved_old.ac)
+"""
+
 import math
 inp = list(map(int, input().split(' ')))
 A = inp[0]

@@ -1,3 +1,7 @@
+"""
+problem tier : Bronze 3 (solved_old.ac)
+"""
+
 T = int(input())
 for i in range(T):
     inp = list(map(int, input().split(' ')))

@@ -1,3 +1,7 @@
+"""
+problem tier : Bronze 5 (solved_old.ac)
+"""
+
 while True:
     inp = list(map(int, input().split(' ')))
     A = inp[0]

@@ -1,3 +1,7 @@
+"""
+problem tier : Silver 5 (solved_old.ac)
+"""
+
 def is_prime(num):
     if num == 1:
         return False

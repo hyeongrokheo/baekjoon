@@ -1,3 +1,8 @@
+"""
+problem tier : Bronze 1 (solved_old.ac)
+"""
+
+
 import math
 
 inp = list(map(int, input().split(' ')))

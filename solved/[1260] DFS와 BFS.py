@@ -1,3 +1,7 @@
+"""
+problem tier : Silver 2 (solved_old.ac)
+"""
+
 def get_ADV(E, V):
     adjacent_vertex = []
     for edge in E:

@@ -1,3 +1,7 @@
+"""
+problem tier : Bronze 4 (solved_old.ac)
+"""
+
 int_A = int(input())
 B = input()
 int_B = int(B)

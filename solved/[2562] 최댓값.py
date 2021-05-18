@@ -1,3 +1,7 @@
+"""
+problem tier : Bronze 2 (solved_old.ac)
+"""
+
 max_num = 1
 max_index = 1
 for i in range(9):

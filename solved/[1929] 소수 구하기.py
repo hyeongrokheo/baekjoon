@@ -1,3 +1,7 @@
+"""
+problem tier : Silver 2 (solved_old.ac)
+"""
+
 import math
 
 inp = input().split()

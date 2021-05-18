@@ -1,3 +1,7 @@
+"""
+problem tier : Silver 1 (solved_old.ac)
+"""
+
 T = int(input())
 # T = 10
 while T:

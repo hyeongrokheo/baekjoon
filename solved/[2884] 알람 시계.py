@@ -1,3 +1,8 @@
+"""
+problem tier : Bronze 3 (solved_old.ac)
+"""
+
+
 import datetime
 
 oroginal_time = input()

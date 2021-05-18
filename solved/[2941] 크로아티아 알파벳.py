@@ -1,3 +1,7 @@
+"""
+problem tier : Silver 5 (solved_old.ac)
+"""
+
 word = input()
 target_word_list = ['dz=', 'c=', 'c-', 'd-', 'lj', 'nj', 's=', 'z=']
 
