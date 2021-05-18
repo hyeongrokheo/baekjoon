@@ -25,4 +25,5 @@ for i in range(len(str2)):
                 up = 0
             arr[i][j] = max([left, up])
 
+print(arr)
 print(arr[len(str2)-1][len(str1)-1])
