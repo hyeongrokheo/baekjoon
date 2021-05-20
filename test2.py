@@ -1,4 +1,3 @@
-l = [1, 2, 3]
-a = [4]
 
-print(l+a)
+import math
+print(int(math.sqrt(24)))
