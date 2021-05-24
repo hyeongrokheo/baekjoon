@@ -3,7 +3,7 @@ problem tier : Gold 3 (solved_old.ac)
 """
 
 import sys
-sys.stdin = open('./input.txt', 'r')
+sys.stdin = open('../input.txt', 'r')
 input = sys.stdin.readline
 
 INF = 999999999
@@ -32,7 +32,7 @@ for m in range(N):
         for e in range(N):
             if dist[s][e][0] > dist[s][m][0] + dist[m][e][0]:
                 dist[s][e][0] = dist[s][m][0] + dist[m][e][0]
-                dist[s][e][1].append(m)
+                dist[s][e][1] = dist[s][m][1].extend(dist[m][e][1])
 
 for d in dist:
     print(' '.join(map(lambda x: str(x[0]), d)))

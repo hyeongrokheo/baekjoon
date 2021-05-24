@@ -3,8 +3,6 @@ problem tier : Silver 4 (solved_old.ac)
 """
 
 import sys
-# sys.stdin = open('./input.txt', 'r')
-# input = sys.stdin.readline
 
 N = int(input())
 time = []
@@ -15,15 +13,19 @@ for i in range(N):
         b = 0
     time.append(t)
     benefit.append(b)
+
 time.reverse()
 benefit.reverse()
-# print(time)
-# print(benefit)
-# exit()
-# dp = benefit
-for i in range(N):
-    if i >= time[i]:
-        benefit[i] = max(benefit[i-time[i]]+benefit[i], benefit[i-1])
-    print(benefit)
 
-print(max(benefit))
+dp = [0 for i in range(N)]
+
+for i in range(N):
+    if i == 0:
+        dp[i] = benefit[0]
+    else:
+        if i-time[i] >= 0:
+            dp[i] = max(dp[i-time[i]] + benefit[i], dp[i-1])
+        else:
+            dp[i] = dp[i-1]
+
+print(max(dp))
