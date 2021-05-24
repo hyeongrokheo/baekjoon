@@ -1,5 +1,5 @@
 """
-problem tier : Silver 1 (solved_old.ac)
+problem tier : Silver 1 (solved.ac)
 """
 
 A, B, C = map(lambda x: int(x), input().split())

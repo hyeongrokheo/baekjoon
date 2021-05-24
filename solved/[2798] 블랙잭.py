@@ -1,5 +1,5 @@
 """
-problem tier : Bronze 2 (solved_old.ac)
+problem tier : Bronze 2 (solved.ac)
 """
 
 N, M = map(lambda x: int(x), input().split())

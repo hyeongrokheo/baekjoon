@@ -1,5 +1,5 @@
 """
-problem tier : Gold 4 (solved_old.ac)
+problem tier : Gold 4 (solved.ac)
 pypy3
 """
 

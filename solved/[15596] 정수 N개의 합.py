@@ -1,5 +1,5 @@
 """
-problem tier : Bronze 2 (solved_old.ac)
+problem tier : Bronze 2 (solved.ac)
 """
 
 def solve(a):

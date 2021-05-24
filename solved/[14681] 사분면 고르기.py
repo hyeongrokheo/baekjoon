@@ -1,5 +1,5 @@
 """
-problem tier : Bronze 4 (solved_old.ac)
+problem tier : Bronze 4 (solved.ac)
 """
 
 X = int(input())

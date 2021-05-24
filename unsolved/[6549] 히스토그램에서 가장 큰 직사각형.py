@@ -1,5 +1,5 @@
 """
-problem tier : Platinum 5 (solved_old.ac)
+problem tier : Platinum 5 (solved.ac)
 """
 
 import sys

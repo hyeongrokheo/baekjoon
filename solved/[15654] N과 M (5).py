@@ -1,7 +1,7 @@
 """
-problem tier : Silver 3 (solved_old.ac)
+problem tier : Silver 3 (solved.ac)
 """
-
+solved = 1
 N, M = map(lambda x: int(x), input().split())
 num = list(map(lambda x: int(x), input().split()))
 num.sort()

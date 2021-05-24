@@ -1,5 +1,5 @@
 """
-problem tier : Silver 2 (solved_old.ac)
+problem tier : Silver 2 (solved.ac)
 """
 
 

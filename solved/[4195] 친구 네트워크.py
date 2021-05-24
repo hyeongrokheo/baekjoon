@@ -1,5 +1,5 @@
 """
-problem tier : Gold 2 (solved_old.ac)
+problem tier : Gold 2 (solved.ac)
 """
 
 import sys

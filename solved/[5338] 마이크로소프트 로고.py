@@ -1,5 +1,5 @@
 """
-problem tier : Bronze 5 (solved_old.ac)
+problem tier : Bronze 5 (solved.ac)
 """
 
 print('       _.-;;-._')

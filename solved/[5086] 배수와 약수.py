@@ -1,5 +1,5 @@
 """
-problem tier : Bronze 3 (solved_old.ac)
+problem tier : Bronze 3 (solved.ac)
 """
 
 while True:

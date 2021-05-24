@@ -1,5 +1,5 @@
 """
-problem tier : XXX X (solved_old.ac)
+problem tier : XXX X (solved.ac)
 """
 
 import sys
