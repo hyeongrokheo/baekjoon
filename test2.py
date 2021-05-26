@@ -1,3 +1,3 @@
+from random import randint
 
-import math
-print(int(math.sqrt(24)))
+print(randint(10, 20))
