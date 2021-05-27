@@ -1,5 +1,4 @@
+import random
 
-
-a = [1,2,3,4,5]
-
-print(a[:-2])
+for i in range(1000):
+    print(random.randint(50, 1000), end=' ')
