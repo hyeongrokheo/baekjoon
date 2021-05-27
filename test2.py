@@ -1,4 +1,5 @@
-from random import randint
 
-print(randint(10, 20))
 
+a = [1,2,3,4,5]
+
+print(a[:-2])
