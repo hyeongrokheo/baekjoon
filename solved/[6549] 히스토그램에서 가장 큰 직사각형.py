@@ -48,21 +48,35 @@ def st_query(L, R, N, S, E):
             return B
 
 def S(left, right, STN):
+    global max_S
     if left == right:
-        return squares[right]
+        if max_S < squares[right]:
+            max_S = squares[right]
+        # return squares[right]
     elif left > right:
-        return 0
+        None
+        # return 0
     elif right - left == 1:
-        return max(squares[left], squares[right], min(squares[left], squares[right]) * 2)
+        s = max(squares[left], squares[right], min(squares[left], squares[right]) * 2)
+        if max_S < s:
+            max_S = s
+        # return max(squares[left], squares[right], min(squares[left], squares[right]) * 2)
     else:
         mid = st_query(left+1, right+1, 1, 1, STN)
         mid = mid[1]
-        LS = S(left, mid-1, STN)
-        RS = S(mid+1, right, STN)
-        MS = (right-left+1) * squares[mid]
-        return max(LS, RS, MS)
+        func_stack.append([left, mid-1, STN])
+        func_stack.append([mid+1, right, STN])
+        # LS = S(left, mid-1, STN)
+        # RS = S(mid+1, right, STN)
+        # MS = (right-left+1) * squares[mid]
+        s = (right - left + 1) * squares[mid]
+        if max_S < s:
+            max_S = s
+
+        # return max(LS, RS, MS)
 
 while True:
+    global max_S
     inp = sys.stdin.readline().strip()
     if inp == '0':
         break
@@ -82,4 +96,12 @@ while True:
     for i in range(n):
         st_update(i+1, [squares[i], i], 1, 1, 2 ** exp)
 
-    print(S(0, n-1, 2 ** exp))
+    max_S = 0
+    func_stack = [[0, n-1, 2**exp]]
+
+    while len(func_stack) != 0:
+        current_func = func_stack.pop()
+        S(current_func[0], current_func[1], current_func[2])
+
+    print(max_S)
+
