@@ -15,7 +15,6 @@ for i in range(N+1):
     for j in range(i):
         x = N-i
         y = x+j
-        # print(x, y)
         if x == y:
             dp[x][y] = 1
         elif num[x] == num[y]:
@@ -23,11 +22,6 @@ for i in range(N+1):
                 dp[x][y] = 1
             else:
                 dp[x][y] = dp[x+1][y-1]
-        # else:
-        #     dp[x][y] = 0
-
-# for d in dp:
-#     print(d)
 
 M = int(input())
 for i in range(M):
