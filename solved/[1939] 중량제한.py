@@ -30,16 +30,18 @@ S, E = map(int, input().split())
 weights[S] = 2000000000
 
 Q = []
-heapq.heappush(Q, (-S, S))
+heapq.heappush(Q, (0, S))
 
 while len(Q) > 0:
     _, p = heapq.heappop(Q)
+    if weights[p] < weights[E]:
+        break
     if p == E:
         break
     for next in maps[p].keys():
         if weights[next] < min(weights[p], maps[p][next]):
             weights[next] = min(weights[p], maps[p][next])
-            heapq.heappush(Q, (-next, next))
+            heapq.heappush(Q, (-weights[next], next))
 
 # print(maps)
 # print(weights)
