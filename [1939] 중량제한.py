@@ -3,8 +3,9 @@ problem tier : Gold 4 (solved.ac)
 """
 
 from collections import deque
+import heapq
 import sys
-sys.stdin = open('./input.txt', 'r')
+# sys.stdin = open('./input.txt', 'r')
 input = sys.stdin.readline
 
 N, M = map(int, input().split())
@@ -13,8 +14,6 @@ maps = [{} for i in range(N+1)]
 
 for i in range(M):
     a, b, c = map(int, input().split())
-    # if b not in maps[a].keys():
-    #     maps[a]
     if b not in maps[a].keys():
         maps[a][b] = c
     else:
@@ -25,18 +24,24 @@ for i in range(M):
     else:
         maps[b][a] = max(maps[b][a], c)
 
-dist = [0 for i in range(N+1)]
+weights = [0 for i in range(N+1)]
 
 S, E = map(int, input().split())
-dist[S] = 0
+weights[S] = 2000000000
 
-Q = deque()
-Q.append(S)
+Q = []
+heapq.heappush(Q, (-S, S))
 
 while len(Q) > 0:
-    p = Q.popleft()
+    _, p = heapq.heappop(Q)
+    if p == E:
+        break
     for next in maps[p].keys():
+        if weights[next] < min(weights[p], maps[p][next]):
+            weights[next] = min(weights[p], maps[p][next])
+            heapq.heappush(Q, (-next, next))
 
-
-print(maps)
+# print(maps)
+# print(weights)
+print(weights[E])
 
