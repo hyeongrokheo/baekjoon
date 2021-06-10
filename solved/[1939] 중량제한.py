@@ -2,6 +2,7 @@
 problem tier : Gold 4 (solved.ac)
 """
 
+from collections import deque
 import heapq
 import sys
 # sys.stdin = open('./input.txt', 'r')
@@ -42,4 +43,7 @@ while len(Q) > 0:
             weights[next] = min(weights[p], maps[p][next])
             heapq.heappush(Q, (-weights[next], next))
 
+# print(maps)
+# print(weights)
 print(weights[E])
+
