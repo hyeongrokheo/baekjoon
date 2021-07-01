@@ -3,7 +3,7 @@ problem tier : Unrated (solved.ac)
 """
 
 import sys
-sys.stdin = open('./input.txt', 'r')
+sys.stdin = open('../input.txt', 'r')
 input = sys.stdin.readline
 
 N, P = map(int, input().split())
