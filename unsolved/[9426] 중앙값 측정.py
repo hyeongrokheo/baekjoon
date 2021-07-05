@@ -4,7 +4,7 @@ problem tier : Platinum 5 (solved.ac)
 
 from collections import deque
 import sys
-sys.stdin = open('./input.txt', 'r')
+sys.stdin = open('../input.txt', 'r')
 input = sys.stdin.readline
 
 def update(x, y, n, l, r):
