@@ -1,4 +1,8 @@
 
 
-a = [[1,2,3,4,5], [2,3,4,5,6], [3,1], [4,4]]
-print(max(a))
+a = None
+if not a:
+    print(1)
+
+if a == None:
+    print(1)
