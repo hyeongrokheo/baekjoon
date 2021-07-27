@@ -7,3 +7,8 @@ sys.stdin = open('./input.txt', 'r')
 input = sys.stdin.readline
 
 
+def solution():
+    None
+
+
+print(solution())
