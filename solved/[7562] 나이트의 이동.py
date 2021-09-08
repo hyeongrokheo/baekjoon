@@ -4,7 +4,7 @@ problem tier : Silver 2 (solved.ac)
 
 from collections import deque
 import sys
-sys.stdin = open('./input.txt', 'r')
+sys.stdin = open('../input.txt', 'r')
 input = sys.stdin.readline
 
 dx = [1, 2, 2, 1, -1, -2, -2, -1]
