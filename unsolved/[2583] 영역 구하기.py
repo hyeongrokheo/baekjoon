@@ -3,7 +3,7 @@ problem tier : Silver 1 (solved.ac)
 """
 
 import sys
-sys.stdin = open('./input.txt', 'r')
+sys.stdin = open('../input.txt', 'r')
 input = sys.stdin.readline
 
 sys.setrecursionlimit(10**6)
