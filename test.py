@@ -1,26 +1,29 @@
 
-import sys
-sys.stdin = open('./input.txt', 'r')
-input = sys.stdin.readline
+N = int(input())
+A = list(map(int, input().split()))
 
-nodes = {}
-
-def solution():
-    N, M, V = map(int, input().split())
-
-    print(N, M, V)
-    for i in range(M):
-        S, E = map(int, input().split())
-        if S not in nodes.keys():
-            nodes[S] = []
-        if E not in nodes.keys():
-            nodes[E] = []
-        nodes[S].append(E)
-        nodes[E].append(S)
-
-    print(nodes)
+# print(N, A)
 
 
-
-
-print(solution())
+permutation = []
+ancient = [False for i in range(len(A))]
+max_permutation = 0
+def BT():
+    # print(permutation, ancient)
+    global max_permutation
+    if len(permutation) == N:
+        result_permutation = 0
+        for i in range(N-1):
+            result_permutation += abs(permutation[i] - permutation[i+1])
+        if max_permutation < result_permutation:
+            max_permutation = result_permutation
+        return
+    for i in range(len(A)):
+        if not ancient[i]:
+            ancient[i] = True
+            permutation.append(A[i])
+            BT()
+            permutation.pop()
+            ancient[i] = False
+BT()
+print(max_permutation)
