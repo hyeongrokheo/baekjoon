@@ -1,31 +1,25 @@
 """
-problem tier : Silver 4 (solved.ac)
+problem tier : Silver 3 (solved.ac)
 """
 
 import sys
+sys.stdin = open('../input.txt', 'r')
+input = sys.stdin.readline
 
-N = int(input())
-time = []
-benefit = []
-for i in range(N):
-    t, b = map(lambda x: int(x), sys.stdin.readline().split())
-    if i + t > N:
-        b = 0
-    time.append(t)
-    benefit.append(b)
 
-time.reverse()
-benefit.reverse()
+def solution():
+    N = int(input())
+    works = []
+    for i in range(N):
+        works.append(list(map(int, input().split())))
 
-dp = [0 for i in range(N)]
+    DP = [[None for i in range(2)] for j in range(15)]
 
-for i in range(N):
-    if i == 0:
-        dp[i] = benefit[0]
-    else:
-        if i-time[i] >= 0:
-            dp[i] = max(dp[i-time[i]] + benefit[i], dp[i-1])
-        else:
-            dp[i] = dp[i-1]
+    for w in works:
+        T, P = w
+        print(T, P)
 
-print(max(dp))
+
+
+
+solution()
