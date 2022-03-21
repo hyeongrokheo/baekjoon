@@ -11,4 +11,4 @@ def solution():
     None
 
 
-print(solution())
+solution()
