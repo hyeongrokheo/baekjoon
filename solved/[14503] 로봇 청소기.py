@@ -3,7 +3,7 @@ problem tier : Gold 5 (solved.ac)
 """
 
 import sys
-sys.stdin = open('./input.txt', 'r')
+sys.stdin = open('../input.txt', 'r')
 input = sys.stdin.readline
 
 
