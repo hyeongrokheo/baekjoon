@@ -6,7 +6,7 @@ problem tier : Gold 3 (solved.ac)
 
 from copy import deepcopy
 import sys
-sys.stdin = open('./input.txt', 'r')
+sys.stdin = open('../input.txt', 'r')
 
 original_office = []
 N, M = None, None
