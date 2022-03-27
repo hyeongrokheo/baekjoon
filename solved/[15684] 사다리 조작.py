@@ -4,7 +4,7 @@ problem tier : Gold 4 (solved.ac)
 
 import sys
 
-sys.stdin = open('./input.txt', 'r')
+sys.stdin = open('../input.txt', 'r')
 
 N, M, H = None, None, None
 find_flag = False
