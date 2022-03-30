@@ -3,7 +3,7 @@ problem tier : Gold 2 (solved.ac)
 """
 
 import sys
-sys.stdin = open('./input.txt', 'r')
+sys.stdin = open('../input.txt', 'r')
 
 
 dr = [-1, 1, 0, 0]
@@ -65,21 +65,12 @@ def solution():
 
     size_sum = 0
 
-    # for b in board:
-    #     print(b)
-    # print()
-
     for fisher in range(C):
         shark_size = get_shark(board, R, fisher)
-        # print('get shark', shark_size)
         board = move_shark(board, R, C)
         size_sum += shark_size
-        # for b in board:
-        #     print(b)
-        # print()
 
     print(size_sum)
-
 
 
 solution()
