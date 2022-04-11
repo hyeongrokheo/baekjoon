@@ -8,4 +8,4 @@ https://www.acmicpc.net/user/syndrome5044
 
 mail : hhr@hhr.kr
 
-###1일 1솔 안하면 터지는 폭탄목걸이 장착중
+### 1일 1솔 안하면 터지는 폭탄목걸이 장착중

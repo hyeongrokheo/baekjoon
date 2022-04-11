@@ -13,13 +13,16 @@ def solution():
     for i in range(N):
         works.append(list(map(int, input().split())))
 
-    DP = [[None for i in range(2)] for j in range(15)]
+    works.reverse()
 
-    for w in works:
-        T, P = w
-        print(T, P)
+    DP = [0]
+    for work in works:
+        T, P = work
+        if len(DP) < T:
+            DP.append(DP[-1])
+        else:
+            DP.append(max(DP[-1], DP[-T] + P))
 
-
-
+    print(max(DP))
 
 solution()

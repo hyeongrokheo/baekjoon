@@ -5,7 +5,7 @@ problem tier : Gold 4 (solved.ac)
 from collections import deque
 from copy import deepcopy
 import sys
-sys.stdin = open('./input.txt', 'r')
+sys.stdin = open('../input.txt', 'r')
 
 combinations = []
 
