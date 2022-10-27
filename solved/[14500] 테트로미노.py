@@ -21,9 +21,7 @@ dy_2 = [0, 0, 2, -2]
 max_tetro = 0
 
 def tetro(i, j, d):
-    # print('tetro', i, j, d)
     stack.append(board[i][j])
-    # print(stack)
     ancestor[i][j] = True
 
     if d == 4:
@@ -38,23 +36,17 @@ def tetro(i, j, d):
             if 0 <= x < N and 0 <= y < M and not ancestor[x][y]:
                 tetro(x, y, d+1)
         if d == 3:
-            # print('d is 3')
             for k in range(4):
                 x2 = i+dx[k]*2
                 y2 = j+dy[k]*2
-                # print('x2 y2', x2, y2)
 
                 if 0 <= x2 < N and 0 <= y2 < M and ancestor[x2][y2]:
-                    # x3 = (x2+i) // 2
-                    # y3 = (y2+j) // 2
                     x3 = i+dx[k]
                     y3 = j+dy[k]
-                    # print('x3 y3', x3, y3)
 
                     for l in range(4):
                         x4 = x3+dx[l]
                         y4 = y3+dy[l]
-                        # print('x4 y4', x4, y4)
                         if 0 <= x4 < N and 0 <= y4 < M and not ancestor[x4][y4]:
                             tetro(x4, y4, d+1)
 
