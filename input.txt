@@ -1,4 +1,2 @@
-How are you today?
-Quite well, thank you, how about yourself?
-I live at number twenty four.
-#
+5
+1 5 3 2 4
